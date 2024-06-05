@@ -37,7 +37,7 @@ h1{
 }
 
 
-img{
+.profile{
     width: 200px;
     height: 200px;
 
@@ -85,6 +85,8 @@ button{
   padding: 5px;
 }
 
+
+/** Grid Projects **/
 .grid {
     /* Grid Fallback */
     display: flex;
@@ -99,18 +101,58 @@ button{
   
   .project {
     /* Demo-Specific Styles */
-    background: #eaeaea;
+    background: none;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    text-align: center;
+    text-wrap: wrap;
+
     height: 200px;
     
     /* Flex Fallback */
     margin-left: 5px;
     margin-right: 5px;
     flex: 1 1 200px;
+
+    position: relative;
   }
 
+  .image{
+    opacity: 50%;
+    width: 100%;
+    height: 100%;
+
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .project:hover .image{
+    opacity: 5%;
+  }
+
+  .image-text{
+    opacity: 0;
+    transition: .5s ease;
+    position: absolute;
+    top: 45%;
+    bottom: 50%;
+
+    font-weight: 700;
+  }
+
+  .project:hover .image-text{
+    opacity: 1;
+  }
+
+/************************************/
+
+/*Contact Form Page*/
   .contact{
     text-align: center;
   }
@@ -161,6 +203,7 @@ button{
     margin-left: 0.5em;
   }
 
+  /************************/
   
   /* If Grid is supported, remove the margin we set for the fallback */
   @supports (display: grid) {
