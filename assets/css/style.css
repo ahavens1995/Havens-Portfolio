@@ -23,6 +23,11 @@ body{
     margin: 0 auto;
     max-width: 56em;
     padding: 1em 0;
+    
+
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
 
     /*hide the scroll bar, might be needed later*/
     /* overflow-y: hidden; */
@@ -234,13 +239,14 @@ button:hover{
 
   /** Footer **/
   footer{
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 96%;
-    margin: 0 auto;
+    height: 60px;
+    margin-top: auto;
     padding: .5rem;
     text-align: center;
+
   }
 
   .icon{
@@ -248,6 +254,7 @@ button:hover{
     height: 50px;
     background-color: transparent;
   }
+  /***************************/
   
   /* If Grid is supported, remove the margin we set for the fallback */
   @supports (display: grid) {
@@ -265,6 +272,11 @@ button:hover{
     .project:last-child{
       flex-grow:1;
     }
+
+    footer{
+      position: fixed;
+    }
+
   }
 
   @media screen and (min-width: 992px){
