@@ -234,6 +234,9 @@ button:hover{
 
   /** Footer **/
   footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 96%;
     margin: 0 auto;
     padding: .5rem;
