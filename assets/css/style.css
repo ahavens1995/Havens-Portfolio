@@ -1,5 +1,8 @@
 :root{
     --background: #144c7d;
+    --text_color: white;
+    --resume_button_color: #356ea1;
+    --resume_button_color_hover: #011221;
 }
 
 *{
@@ -15,13 +18,22 @@ body{
     font-size: 1.75rem;
     line-height: 1.5;
     background-color: var(--background);
-    color: white;
+    color: var(--text_color);
 
     margin: 0 auto;
     max-width: 56em;
     padding: 1em 0;
+
+    /*hide the scroll bar, might be needed later*/
+    /* overflow-y: hidden; */
 }
 
+main{
+  margin: 20px;
+  padding: 20px;
+}
+
+/** Header ***/
 header{
   width: 96%;
   margin: 0 auto;
@@ -29,13 +41,12 @@ header{
   text-align: center;
 }
 
-h1{
+.title{
     margin-bottom: 0.625rem;
     font-weight: 700;
     line-height: 1.1;
     font-size: 4rem;
 }
-
 
 .profile{
     width: 200px;
@@ -44,6 +55,9 @@ h1{
     border-radius: 50%;
 }
 
+/********************/
+
+/** Nav Bar**/
 nav{
   text-align: center;
 }
@@ -54,37 +68,50 @@ nav h2{
 
 a{
   text-decoration: none;
-  color: white;
+  color: var(--text_color);
 }
+/*******************/
 
-main{
-  margin: 20px;
-  padding: 20px;
-}
 
+/** About Page **/
 .about{
   text-decoration: underline;
   text-align: center;
+
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 4rem;
 }
 
 .left{
   padding: 20px;
   text-align: left;
 }
+/***********************/
 
+/* Resume Page */
 .center{
   text-align: center;
 }
 
 button{
-  background-color: #27c5b5;
+  background-color: var(--resume_button_color);
   border: none;
-  color: white;
+  border-radius: 5px;
+
+  color: var(--text_color);
   font-family: 'Courier New', Courier, monospace;
   font-size: 24px;
-  padding: 5px;
+  font-weight: bold;
+  padding: 10px;
+  transition: .5s ease-in;
 }
 
+button:hover{
+  background-color: var(--resume_button_color_hover);
+  transition: .5s;
+}
+/*************/
 
 /** Grid Projects **/
 .grid {
@@ -140,7 +167,7 @@ button{
     opacity: 0;
     transition: .5s ease;
     position: absolute;
-    top: 45%;
+    top: 40%;
     bottom: 50%;
 
     font-weight: 700;
@@ -204,6 +231,20 @@ button{
   }
 
   /************************/
+
+  /** Footer **/
+  footer{
+    width: 96%;
+    margin: 0 auto;
+    padding: .5rem;
+    text-align: center;
+  }
+
+  .icon{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+  }
   
   /* If Grid is supported, remove the margin we set for the fallback */
   @supports (display: grid) {
